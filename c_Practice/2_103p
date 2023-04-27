@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    float x, y, z;
+
+    printf("3개의 실수를 입력하시오:");
+    scanf("%f", &x);
+    scanf("%f", &y);
+    scanf("%f", &z);    
+
+    printf("합계=%.2f", x+y+z);
+    printf("평균=%.2f", (x+y+z)/3);    
+}
