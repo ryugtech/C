@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    double a, b, c, x, dls;
+
+    printf("계수 a, 계수 b, 계수 c를 차례대로 입력하시오:");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    if(a == 0)
+    {
+        x = -c / b;
+        printf("방정식의 근은 %lf입니다.", x);
+    }
+    else
+    {
+        dls = (b*b) - (4*a*c);
+        if(dls >= 0)
+        {
+            printf("방적식의 근은 %lf입니다.\n", (-b + sqrt(dls)) / 2.0*a);
+            printf("방적식의 근은 %lf입니다.\n", (-b - sqrt(dls)) / 2.0*a);
+        }
+        else
+            printf("실근이 존재하지 않습니다\n");
+    }
+}
