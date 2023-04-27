@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    char op;
+    printf("수식을 입력하시오(예: 2 + 5) >> ");
+    scanf("%d %c %d", &x, &op, &y);
+
+    if(op == '+')
+    {
+        printf("%d %c %d = %d", x, op, y, x+y);
+    }
+    else if(op == '-')
+    {
+        printf("%d %c %d = %d", x, op, y, x-y);
+    }
+    else if(op == '*')
+    {
+        printf("%d %c %d = %d", x, op, y, x*y);
+    }
+    else if(op == '/')
+    {
+        printf("%d %c %d = %d", x, op, y, x/y);
+    }
+    else
+        printf("지원하지 않는 연산자입니다.");
+}
