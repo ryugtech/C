@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    int y;
+
+    printf("첫번쨰 숫자를 입력하시오:");
+    scanf("%d", &x);
+    printf("두번쨰 숫자를 입력하시오:");
+    scanf("%d", &y);
+
+    printf("두수의 합: %d", x+y);
+
+}
