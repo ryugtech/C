@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    float x;
+    float y;
+
+    printf("반지름을 입력하시오:");
+    scanf("%f", &x);
+
+    y = 3.14 * x * x;
+
+    printf("원의 면적: %f", y);
+
+}
