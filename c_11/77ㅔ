@@ -1,0 +1,20 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    time_t start, end; //시작시간, 종료시간. time_t는 unsigned long과 동일
+    
+    start = time(NULL); //시작시간 저장
+    printf("10초가 되면 아무 키나 누르세요\n");
+    while(1)
+    {
+        if(getchar()) //아무키나 입력시 while문 종료
+        {
+            break;
+        }
+    }
+    printf("종료되었습니다.\n");
+    end = time(NULL); //종료시간 저장
+    printf("경과된 시간은 %1d초 입니다", end - start);
+}
