@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    double distance, height, degrees, radians, tree_height; //나무와의 거리, 측정자 키, 각도, 라디안 ,나무의 높이
+    
+    printf("나무와의 거리(단위는 미터) ");
+    scanf("%lf", &distance);
+    
+    printf("측정자의 키(단위는 미터) ");
+    scanf("%lf", &height);
+    
+    printf("각도(단위는 도) ");
+    scanf("%lf", &degrees);
+    
+    radians = degrees * (3.141592 / 180.0); //라디안 계산
+    
+    tree_height = tan(radians) * distance + height; //나무의 높이 계산
+    
+    printf("나무의 높이(단위는 미터): %lf", tree_height);
+}
