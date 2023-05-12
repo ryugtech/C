@@ -1,0 +1,32 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int coin_toss()
+{
+    int head = rand() % 2;
+    return head; //head값 반환
+}
+
+int main() {
+    int heads = 0; //앞면이 나온 횟수
+    int tails = 0; //뒷면이 나온 횟수
+    
+    srand((unsigned)time(NULL));
+    
+    for(int i = 0; i < 100; i++) //100번 반복
+    {
+        if(coin_toss() == 1) //return값이 1이면 앞면
+        {
+            heads ++;
+        }
+        else //return값이 0이면 뒷면
+        {
+            tails ++;
+        }
+    }
+    
+    printf("동전의 앞면: %d \n", heads);
+    printf("동전의 뒷면: %d \n", tails);
+}
