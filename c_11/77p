@@ -6,10 +6,10 @@ int main() {
     time_t start, end; //시작시간, 종료시간. time_t는 unsigned long과 동일
     
     start = time(NULL); //시작시간 저장
-    printf("10초가 되면 아무 키나 누르세요\n");
+    printf("10초가 되면 엔터키를 누르세요\n");
     while(1)
     {
-        if(getchar()) //아무키나 입력시 while문 종료
+        if(getchar()) //엔터키 입력시 while문 종료
         {
             break;
         }
