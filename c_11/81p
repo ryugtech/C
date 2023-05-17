@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592 //기호상수 파이
+
+double rad(double degree)
+{
+    return PI * degree / 180.0;
+}
+
+void drawbar(int height) //height만큼 별찍기
+{
+    for(int i = 0; i < height; i++)
+    {
+        printf("*");
+    }
+    printf("\n"); //줄바꿈
+}
+
+int main() {
+    int x, y;
+    for(int i = 0; i <= 90; i += 10)
+    {
+        y = (int)(60 * sin(rad((double)i)) + 0.5);
+        drawbar(y); //y길이만큼 별찍는 함수
+    }
+}
